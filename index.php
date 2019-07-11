@@ -38,7 +38,6 @@
         }else{
             $genero= test_input($_POST["genero"]);
         }
-        header("Location: respuesta.php");
     } 
 
      function test_input($datos){
@@ -51,7 +50,7 @@
     ?>
     <h1>Ingresa los datos requeridos a continuación</h1>
     <p><span class="Error">* Campos obligatorio</span></p>
-    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" >
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
         Nombres: <input type="text" name="nombre" value="<?php echo $nombre; ?>">
         <span class="Error">* <?php echo $nombreErr; ?></span>
         <br><br>

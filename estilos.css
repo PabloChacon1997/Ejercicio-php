@@ -2,11 +2,8 @@
 	color: red;
 }
 
-body {
+body, h1 {
     background-color: #cee217;
-}
-
-html {
     color: #1f1da7;
     font-size: 18px;
     font-variant: small-caps;
@@ -14,3 +11,4 @@ html {
     font-weight: bold;
     font-family: Lucida Grande;
 }
+
