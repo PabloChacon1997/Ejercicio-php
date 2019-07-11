@@ -8,7 +8,7 @@
 	echo "<html>";
 	echo "<body>";
 	echo "<h1>Tus datos son</h1>";
-	echo "<table width='200'>";
+	echo "<table border='1'>";
 	echo "<tr>";
 	echo "<td>";
 	echo "Nombre";

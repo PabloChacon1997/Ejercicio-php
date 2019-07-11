@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,10 +21,10 @@
             }
         }
         if(empty($_POST["apellido"])){
-            $nombreErr="apellido es requerido";
+            $apellidoErr="Apellido es requerido";
         }else{
             $apellido= test_input($_POST["apellido"]);
-            if (!preg_match("/^[a-zA-Z ]*$/", $nombre)) {
+            if (!preg_match("/^[a-zA-Z ]*$/", $apellido)) {
                 $apellidoErr="Solo letras y espacios en blanco";
             }
         }
@@ -39,17 +38,20 @@
         }else{
             $genero= test_input($_POST["genero"]);
         }
+        header("Location: respuesta.php");
+    } 
 
-        function test_input($datos){
+     function test_input($datos){
             $datos=trim($datos);
             $datos=stripcslashes($datos);
+            $datos=htmlspecialchars($datos);
             return $datos;
-        }
-    } 
+     }
+     
     ?>
     <h1>Ingresa los datos requeridos a continuación</h1>
     <p><span class="Error">* Campos obligatorio</span></p>
-    <form method="post" action="<?php echo validar($_SERVER["index.php"])?>" >
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" >
         Nombres: <input type="text" name="nombre" value="<?php echo $nombre; ?>">
         <span class="Error">* <?php echo $nombreErr; ?></span>
         <br><br>
@@ -65,7 +67,8 @@
         <input type="radio" name="genero" <?php if (isset($genero) && $genero=="Otro")echo "checked"; ?> value="Otro">Otro
         <span class="Error">* <?php echo $generoErr; ?></span>
         <br><br>
-        <input type="submit" name="submit" value="Guardar">
+        <input type="submit" name="submit" value="Enviar"/>
     </form>
+
 </body>
 </html>
