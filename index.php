@@ -50,7 +50,7 @@
     ?>
     <h1>Ingresa los datos requeridos a continuación</h1>
     <p><span class="Error">* Campos obligatorio</span></p>
-    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"])?>">
         Nombres: <input type="text" name="nombre" value="<?php echo $nombre; ?>">
         <span class="Error">* <?php echo $nombreErr; ?></span>
         <br><br>
@@ -68,6 +68,49 @@
         <br><br>
         <input type="submit" name="submit" value="Enviar"/>
     </form>
+
+<?php 
+
+     echo "<html>";
+     echo "<body>";
+     echo "<h1>Tus datos son</h1>";
+     echo "<table border='1'>";
+     echo "<tr>";
+     echo "<td>";
+     echo "Nombre";
+     echo "</td>";
+     echo "<td>";
+     echo $nombre;
+     echo "</td>";
+     echo "</tr>";
+     echo "<tr>";
+     echo "<td>";
+     echo "Apellido";
+     echo "</td>";
+     echo "<td>";
+     echo $apellido;
+     echo "</td>";
+     echo "</tr>";
+     echo "<tr>";
+     echo "<td>";
+     echo "Genero";
+     echo "</td>";
+     echo "<td>";
+     echo $genero;
+     echo "</td>";
+     echo "</tr>";
+     echo "<tr>";
+     echo "<td>";
+     echo "Comentario";
+     echo "</td>";
+     echo "<td>";
+     echo $comentario;
+     echo "</td>";
+     echo "</tr>";
+     echo "</table>";
+     echo "</body>";
+     echo "</html>";
+ ?>
 
 </body>
 </html>
