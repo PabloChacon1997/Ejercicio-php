@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -64,7 +65,7 @@
         <input type="radio" name="genero" <?php if (isset($genero) && $genero=="Otro")echo "checked"; ?> value="Otro">Otro
         <span class="Error">* <?php echo $generoErr; ?></span>
         <br><br>
-        <input type="submit" name="submit" value="Submit">
+        <input type="submit" name="submit" value="Guardar">
     </form>
 </body>
 </html>

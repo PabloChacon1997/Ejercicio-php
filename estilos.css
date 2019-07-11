@@ -1,3 +1,16 @@
 .Error{
 	color: red;
 }
+
+body {
+    background-color: #cee217;
+}
+
+html {
+    color: #1f1da7;
+    font-size: 18px;
+    font-variant: small-caps;
+    font-style: normal;
+    font-weight: bold;
+    font-family: Lucida Grande;
+}
